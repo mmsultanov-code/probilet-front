@@ -16,27 +16,27 @@
             </svg>
         </nuxt-link>
         <div class="widget-news-list-container">
-            <a href="#" class="one-news" style="background-image: url('/img/intro/news/1.webp')">
+            <nuxt-link :to="`/${$i18n.locale}/news/page-news-slug`" class="one-news" style="background-image: url('/img/intro/news/1.webp')">
                 <span class="bottom-content">
                     <strong class="title">Заголовок новости</strong>
                 </span>
-            </a>
-            <a href="#" class="one-news" style="background-image: url('/img/intro/news/2.webp')">
+            </nuxt-link>
+            <nuxt-link :to="`/${$i18n.locale}/news/page-news-slug`" class="one-news" style="background-image: url('/img/intro/news/2.webp')">
                 <span class="bottom-content">
                     <strong class="title">Теперь мы доступны в гугл плей</strong>
                 </span>
-            </a>
-            <a href="#" class="one-news" style="background-image: url('/img/intro/news/3.webp')">
+            </nuxt-link>
+            <nuxt-link :to="`/${$i18n.locale}/news/page-news-slug`" class="one-news" style="background-image: url('/img/intro/news/3.webp')">
                 <span class="bottom-content">
                     <strong class="title">Новые мероприятия уже скоро</strong>
                 </span>
-            </a>
+            </nuxt-link>
         </div>
     </div>
 </template>
 <style lang="scss" scoped>
 .intro-news-box {
-    max-width: 336px;
+    max-width: 270px;
     width: 100%;
     .widget-title {
         color: var(--text-color);
@@ -71,7 +71,6 @@
                 margin-bottom: 0;
             }
             &::before {
-                background-color: rgba(0, 0, 0, 0.5);
                 position: absolute;
                 display: block;
                 height: 100%;
@@ -79,6 +78,7 @@
                 width: 100%;
                 left: 0;
                 top: 0;
+                background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
             }
             .bottom-content {
                 position: relative;

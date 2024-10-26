@@ -12,6 +12,7 @@
                         <SwiperSlide
                             v-for="(item, index) in calendar_days"
                             :key="`calendar-day-${index}`"
+                            tag="button"
                             class="calendar-day"
                             :class="{ active: is_day_off(item.week_day) }"
                         >
@@ -29,9 +30,10 @@
 const swiper_options = ref({
     loop: false,
     spaceBetween: 12,
-    slidesPerView: 19,
+    slidesPerView: 18,
     effect: 'fade',
-    modules: [SwiperNavigation],
+    modules: [SwiperNavigation, SwiperFreeMode],
+    freeMode: true,
     fadeEffect: {
         crossFade: true
     },
@@ -101,14 +103,18 @@ const calendar_days = computed(() => {
         text-decoration: none;
         align-items: center;
         border-radius: 12px;
-        padding: 12px;
+        padding: 18px;
         display: flex;
+        border: none;
         .day {
             font-size: 20px;
         }
         &.active {
             background-color: color.adjust(#dd3333, $lightness: 40%);
             color: var(--theme-color);
+        }
+        &:hover {
+            cursor: pointer;
         }
     }
 }

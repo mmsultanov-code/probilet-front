@@ -103,7 +103,7 @@ const swiperOptions = ref({
 </script>
 <style lang="scss" scoped>
 .intro-slider {
-    max-width: calc(100% - 360px);
+    max-width: calc(100% - 270px);
     border-radius: 12px;
     position: relative;
     overflow: hidden;
