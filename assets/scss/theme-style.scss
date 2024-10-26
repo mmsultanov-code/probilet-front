@@ -3,7 +3,7 @@
 :root {
     --theme-color: #dd3333;
     --gray-color: #efefef;
-    --body-color: #f1f2f5;
+    --body-color: #F5F2F0;
     --text-color: #333;
     --theme-font: 'Onest', sans-serif;
 }
@@ -245,5 +245,24 @@ h1,h2,h3,h4,h5 {
         &:last-child {
             margin-bottom: 0;
         }
+    }
+}
+
+select.form-control {
+    background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.375 6.83333L6 11M6 11L1.625 6.83333M6 11L6 1" stroke="%23252525" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
+    font-family: var(--theme-font);
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border-radius: 12px;
+    position: relative;
+    padding: 12px 48px 12px 12px;
+    appearance: none;
+    font-size: 16px;
+    line-height: 1;
+    border: none;
+    background-position: right 24px center;
+    &:focus {
+        outline: none;
+        background-image: url('data:image/svg+xml,<svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.375 6.83333L6 11M6 11L1.625 6.83333M6 11L6 1" stroke="%23dd3333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>');
     }
 }

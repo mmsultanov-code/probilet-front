@@ -1,8 +1,18 @@
 <template>
     <section class="section-popular-events">
         <div class="container">
-            <div class="section-itlte">
-                <h2>Популярные события</h2>
+            <div class="section-title">
+                <h2>{{ title }}</h2>
+            </div>
+            <div class="filter-list" v-if="filter">
+                <select name="category-filter" id="category-filter" class="form-control">
+                    <option value="0">Все события</option>
+                    <option value="1">Концерты</option>
+                    <option value="2">Театр</option>
+                    <option value="3">Спорт</option>
+                    <option value="4">Катки</option>
+                    <option value="4">Выставки</option>
+                </select>
             </div>
             <div class="columns column-4">
                 <one-event v-bind="item" v-for="(item, event_index) in events" :key="`event-index-${event_index}`" />
@@ -16,6 +26,16 @@
 </template>
 <script>
 export default {
+    props: {
+        title: {
+            type: String,
+            default: ''
+        },
+        filter: {
+            type: Boolean,
+            default: false
+        }
+    },
     data() {
         return {
             events: []
@@ -179,5 +199,15 @@ export default {
 <style lang="scss" scoped>
 .section-popular-events {
     margin-top: 24px;
+    .section-title {
+        margin: 0 0 24px;
+        h2 {
+            margin: 0;
+        }
+    }
+    .filter-list {
+        margin-bottom: 24px;
+        margin-top: -12px;
+    }
 }
 </style>
