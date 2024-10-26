@@ -1,0 +1,197 @@
+@use 'sass:color';
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+:root {
+    --theme-color: #dd3333;
+    --gray-color: #efefef;
+    --body-color: #f1f2f5;
+    --text-color: #333;
+    --theme-font: 'Onest', sans-serif;
+}
+
+$themeColor: var(--theme-color);
+
+* {
+    box-sizing: border-box;
+    &::before,
+    &::after {
+        box-sizing: border-box;
+    }
+}
+
+body {
+    background-color: var(--body-color);
+    font-family: var(--theme-font);
+    color: var(--text-color);
+    line-height: 1.4;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1,h2,h3,h4,h5 {
+    margin-bottom: 24px;
+    margin-top: 0;
+}
+
+// theme classe's
+
+.text-left {
+    text-align: left;
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.spacer {
+    display: block;
+    height: 24px;
+    width: 100%;
+    &.xs {
+        height: 12px;
+    }
+}
+
+.theme-button {
+    transition: background-color 0.3s;
+    background-color: #afafaf;
+    color: var(--text-color);
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 6px;
+    padding: 12px 24px;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    &:hover {
+        background-color: color.adjust(#efefef, $lightness: -10%);
+    }
+    &.button-sm {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+    &.button-lg {
+        font-size: 18px;
+        padding: 16px 32px;
+    }
+    &.red {
+        background-color: var(--theme-color);
+        color: #fff;
+        &:hover {
+            background-color: color.adjust(#dd3333, $lightness: -10%);
+        }
+    }
+}
+
+.flex-side {
+    align-items: center;
+    display: flex;
+    &.top {
+        align-items: flex-start;
+    }
+    &.space {
+        justify-content: space-between;
+    }
+    &.center {
+        justify-content: center;
+    }
+    &.down {
+        align-items: flex-end;
+    }
+    &.list {
+        gap: 24px;
+        &.list-xs {
+            gap: 12px;
+        }
+    }
+    &.stretch {
+        align-items: stretch;
+    }
+}
+
+.container {
+    margin-inline: auto;
+    max-width: 1170px;
+    width: 100%;
+}
+
+.columns {
+    flex-wrap: wrap;
+    display: flex;
+    width: 100%;
+    gap: 24px;
+    &.column-1 {
+        & > * {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    &.column-2 {
+        & > * {
+            max-width: calc(100% / 2 - 12px);
+            width: 100%;
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+        }
+    }
+    &.column-3 {
+        & > * {
+            max-width: calc(100% / 3 - 16px);
+            width: 100%;
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+    }
+    &.column-4 {
+        & > * {
+            max-width: calc(100% / 4 - 18px);
+            width: 100%;
+            &:nth-child(4n) {
+                margin-right: 0;
+            }
+        }
+    }
+    &.column-5 {
+        & > * {
+            max-width: calc(100% / 5 - 20px);
+            width: 100%;
+            &:nth-child(5n) {
+                margin-right: 0;
+            }
+        }
+    }
+    &.column-6 {
+        & > * {
+            max-width: calc(100% / 6 - 20px);
+            width: 100%;
+            &:nth-child(6n) {
+                margin-right: 0;
+            }
+        }
+    }
+    &.column-7 {
+        & > * {
+            max-width: calc(100% / 7 - 21px);
+            width: 100%;
+            &:nth-child(7n) {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+.section-title {
+    margin: 0 0 24px;
+    h2, .title {
+        font-weight: 500;
+        margin: 0 0 0;
+    }
+}
