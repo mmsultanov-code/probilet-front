@@ -1,6 +1,6 @@
 <template>
     <div class="intro-news-box">
-        <a href="#" class="widget-title">
+        <nuxt-link :to="`/${$i18n.locale}/news`" class="widget-title">
             <span>Новости</span>
             <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -14,7 +14,7 @@
                 strokeLinejoin="round">
                 <path d="m9 18 6-6-6-6"></path>
             </svg>
-        </a>
+        </nuxt-link>
         <div class="widget-news-list-container">
             <a href="#" class="one-news" style="background-image: url('/img/intro/news/1.webp')">
                 <span class="bottom-content">
