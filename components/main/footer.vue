@@ -72,7 +72,7 @@
 <style lang="scss" scoped>
 .main-footer {
     margin-bottom: 24px;
-    margin-top: 24px;
+    margin-top: 48px;
     .form-email-subscriber {
         max-width: 300px;
         width: 100%;
@@ -163,15 +163,21 @@
             padding: 0;
             margin: 0;
             li {
+                margin-bottom: 6px;
                 display: block;
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 a {
+                    border-bottom: 1px dashed transparent;
                     text-decoration: none;
                     color: #252525;
+                    line-height: 1.4;
                     font-size: 16px;
-                    display: block;
-                    padding: 6px 0;
+                    display: inline;
+                    padding: 6px 0 0;
                     &:hover {
-                        text-decoration: underline;
+                        border-bottom-color: var(--text-color);
                     }
                 }
             }

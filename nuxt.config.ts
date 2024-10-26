@@ -9,6 +9,7 @@ export default defineNuxtConfig({
             meta: [{ name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no' }]
         }
     },
+    plugins: [{ src: './plugins/maps.js', mode: 'client' }],
     modules: ['nuxt-swiper', '@nuxtjs/i18n'],
     i18n: {
         strategy: 'prefix',

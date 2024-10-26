@@ -5,7 +5,7 @@
                 <ul>
                     <li><nuxt-link :to="`/${$i18n.locale}/company/about-us`">О Нас</nuxt-link></li>
                     <li><nuxt-link :to="`/${$i18n.locale}/company/contacts`">Контакты</nuxt-link></li>
-                    <li><a href="#">Точки продаж</a></li>
+                    <li><nuxt-link :to="`/${$i18n.locale}/company/points-of-sale`">Точки продаж</nuxt-link></li>
                     <li><nuxt-link :to="`/${$i18n.locale}/company/for-partners`">Партнёрам</nuxt-link></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
