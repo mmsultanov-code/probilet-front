@@ -38,18 +38,18 @@
                         <div class="nav-widget">
                             <ul>
                                 <li><nuxt-link :to="`/${$i18n.locale}/company/about-us`">О компании</nuxt-link></li>
-                                <li><a href="#">Контакты</a></li>
-                                <li><a href="#">Возврат билетов</a></li>
-                                <li><a href="#">Партнерам и организациям мероприятий</a></li>
-                                <li><a href="#">FAQ</a></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/company/contacts`">Контакты</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/legacy/ticket-return-policy`">Возврат билетов</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/company/for-partners`">Партнерам и организациям мероприятий</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/company/faq`">FAQ</nuxt-link></li>
                             </ul>
                         </div>
                         <div class="nav-widget">
                             <ul>
-                                <li><a href="#">Пользовательское соглашени</a></li>
-                                <li><a href="#">Пользовательское и лицензионное соглашение</a></li>
-                                <li><a href="#">Соглашение об обработке персональных данных</a></li>
-                                <li><a href="#">Политика конфиденциальности</a></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/legacy/dpa-pp`">Пользовательское соглашение</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/legacy/ula`">Пользовательское и лицензионное соглашение</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/legacy/dpa-pp`">Соглашение об обработке персональных данных</nuxt-link></li>
+                                <li><nuxt-link :to="`/${$i18n.locale}/legacy/po`">Политика конфиденциальности</nuxt-link></li>
                             </ul>
                         </div>
                     </div>

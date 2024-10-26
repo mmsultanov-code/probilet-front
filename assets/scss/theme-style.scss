@@ -47,6 +47,10 @@ h1,h2,h3,h4,h5 {
     text-align: right;
 }
 
+.w100 {
+    width: 100%;
+}
+
 .spacer {
     display: block;
     height: 24px;
@@ -112,6 +116,11 @@ h1,h2,h3,h4,h5 {
     }
     &.stretch {
         align-items: stretch;
+    }
+    &.full {
+        & > * {
+            width: 100%;
+        }
     }
 }
 
